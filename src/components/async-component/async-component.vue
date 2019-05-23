@@ -43,6 +43,7 @@
           }
           let Fn = Function;
           this.mode = new Fn(`return ${res.data}`)();
+          if(this.mode.default) this.mode = this.mode.default; // 针对WEBPACK 4打包的文件
         }
       }
     }
